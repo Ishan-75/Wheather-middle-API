@@ -1,5 +1,9 @@
+import cors from 'cors';
 import express from 'express';
+
 const app = express();
+app.use(cors());
+app.use(express.json());
 
 async function getWheather(city) {
     const response = await fetch(
